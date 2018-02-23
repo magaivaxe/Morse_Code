@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Mar -.-. morse</string>
+    <string name="fieldMorse">Morse</string>
+    <string name="fieldWords">Word</string>
+    <string name="buttonEraser">Eraser</string>
+    <string name="buttonDot">Dot ( . )</string>
+    <string name="buttonHyphen">Hyphen (-)</string>
+    <string name="buttonSlash">Slash (\/)</string>
+    <string name="buttonPlay">Play</string>
+</resources>
