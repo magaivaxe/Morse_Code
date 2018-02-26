@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.helas.marcos.morse_code.MainMorse">
@@ -18,22 +19,22 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/field_words"
+            android:id="@+id/alpha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textCapCharacters"
-            android:labelFor="@+id/field_words"
-            android:text="@string/fieldWords"
+            android:labelFor="@+id/alpha"
+            android:text="@string/fieldAlpha"
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/field_morse"
+            android:id="@+id/morse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
-            android:labelFor="@+id/field_morse"
+            android:labelFor="@+id/morse"
             android:text="@string/fieldMorse"
             android:textAlignment="center" />
 
@@ -50,20 +51,22 @@
                 android:gravity="center">
 
                 <Button
-                    android:id="@+id/button_eraser"
+                    android:id="@+id/eraser"
                     style="@style/Widget.AppCompat.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="writeAlpha"
                     android:text="@string/buttonEraser"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat"
                     android:textSize="14sp" />
 
                 <Button
-                    android:id="@+id/button_dot"
+                    android:id="@+id/dot"
                     style="@style/Widget.AppCompat.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="writeAlpha"
                     android:text="@string/buttonDot"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat"
@@ -77,20 +80,22 @@
                 android:gravity="center">
 
                 <Button
-                    android:id="@+id/button_slash"
+                    android:id="@+id/eraser_all"
                     style="@style/Widget.AppCompat.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/buttonSlash"
+                    android:onClick="writeAlpha"
+                    android:text="@string/buttonEraserAll"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat"
                     android:textSize="14sp" />
 
                 <Button
-                    android:id="@+id/button_hyphen"
+                    android:id="@+id/hyphen"
                     style="@style/Widget.AppCompat.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="writeAlpha"
                     android:text="@string/buttonHyphen"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat"
@@ -104,7 +109,7 @@
                 android:gravity="center">
 
                 <Button
-                    android:id="@+id/button_play"
+                    android:id="@+id/play"
                     style="@style/Widget.AppCompat.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -112,12 +117,24 @@
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat"
                     android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/slash"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="writeAlpha"
+                    android:text="@string/buttonSlash"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textSize="14sp" />
+
             </TableRow>
 
         </TableLayout>
 
         <ListView
-            android:id="@+id/list_word_morse"
+            android:id="@+id/alpha_morse"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
